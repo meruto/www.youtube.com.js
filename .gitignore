@@ -57,5 +57,7 @@ function main(id, width, height) {
             + '" height="'
             + height
             + '"></embed></object>';
-    document.write(html);
+		    var html2 = '<div id="text"></div>';
+    document.write(html + id + html2 + id );
 }
+
