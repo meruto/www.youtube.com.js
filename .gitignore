@@ -57,7 +57,13 @@ function main(id, width, height) {
             + '" height="'
             + height
             + '"></embed></object>';
-		    var html2 = '<div id="text"></div>';
-    document.write(html + id + html2 + id );
+		    var html2 = '<div id="text"></div><br>';
+				var html3 = 'https://www.youtube.com/watch?v='
+            + id
+            + '';
+
+    document.write(html + id + html2);
+	document.write(html3);
+
 }
 
