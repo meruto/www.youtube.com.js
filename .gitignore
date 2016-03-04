@@ -11,11 +11,7 @@ function url2cmd(url) {
 
     var id = RegExp.$1;
 
-   url = 'https://www.youtube.com/watch?v=PEVZTAYzaMM';
-  $.get(url, function(data){
-    var content = $(data.responseText).find('.title').text();
-    $("#text").text(content);
-  });
+ 
 
 
 
@@ -57,13 +53,23 @@ function main(id, width, height) {
             + '" height="'
             + height
             + '"></embed></object>';
-		    var html2 = '<div id="text"></div><br>';
 				var html3 = 'https://www.youtube.com/watch?v='
             + id
             + '';
 
-    document.write(html + id + html2);
+    document.write(html);
+
+
+
+  url = ''
+            + html3
+            + '';
+  $.get(url, function(data){
+    var content = $(data.responseText).find('.title').text();
+    $("#text").text(content);
+  });
+			    var html2 = '<div id="text"></div><br>';
+
+	document.write(html2);
 	document.write(html3);
-
 }
-
